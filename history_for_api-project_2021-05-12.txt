@@ -1,0 +1,131 @@
+    1  lsb_release -a
+    2  sudo apt update
+    3  lsblk -f
+    4  sudo apt -y upgrade
+    5  sudo apt update
+    6  sudo apt -y upgrade
+    7  blkid
+    8  sudo nano /etc/fstab
+    9  sudo nano /etc/initramfs-tools/conf.d/resume
+   10  sudo nano /etc/fstab
+   11  sudo nano /etc/initramfs-tools/conf.d/resume
+   12  sudo nano /etc/fstab
+   13  update-initramfs -u -k all
+   14  sudo nano /etc/fstab
+   15  update-initramfs -u -k all
+   16  sudo nano /etc/initramfs-tools/conf.d/resume
+   17  blkid
+   18  sudo nano /etc/fstab
+   19  lsblk -f
+   20  sudo nano /etc/fstab
+   21  sudo nano /etc/initramfs-tools/conf.d/resume
+   22  update-initramfs -u -k all
+   23  chmod 700 ~/.ssh
+   24  chmod 600 ~/.ssh/authorized_keys
+   25  chown $USER:$USER ~/.ssh -R
+   26  sudo nano /etc/ssh/sshd_config
+   27  vim /etc/sysctl.conf
+   28  sudo sysctl -p
+   29  cat /proc/sys/fs/inotify/max_user_watches
+   30  sysctl net.ipv4.ip_forward
+   31  sudo apt-get install openssh-server
+   32  sudo systemctl status ssh
+   33  vim /etc/ssh/sshd_config
+   34  sudo systemctl restart ssh
+   35  sudo apt -y upgrade
+   36  sudo apt -y install software-properties-common
+   37  history
+   38  sudo apt update
+   39  sudo apt -y upgrade
+   40  sudo add-apt-repository ppa:ondrej/php
+   41  apt list --installed software-properties*
+   42  dpkg -l software-properties-common
+   43  sudo apt update
+   44  sudo apt -y upgrade
+   45  sudo apt -y install php7.4
+   46  php -v
+   47  dpkg -l | grep php | tee packages.txt
+   48  sudo apt-cache search php7.4
+   49  sudo apt -y install php7.4-mysql mysql-client mysql-server
+   50  sudo apt -y install php7.4-mbstring php7.4-xml php7.4-zip unzip vim git php7.4-cli php7.4-common php7.4-gd php7.4-curl php7.4-intl php7.4-bcmath php7.4-imap libapache2-mod-php7.4
+   51  php -v
+   52  sudo apt update
+   53  sudo apt -y upgrade
+   54  php -v
+   55  php -m
+   56  sudo apt automove
+   57  sudo apt autoremove
+   58  sudo apt -y autoremove
+   59  cat /etc/services
+   60  sudo nano /etc/default/ufw
+   61  sudo ufw status
+   62  ip addr
+   63  cat /etc/services
+   64  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+   65  php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+   66  php composer-setup.php
+   67  php -r "unlink('composer-setup.php');"
+   68  ls
+   69  sudo mv composer.phar /usr/local/bin/composer
+   70  ls
+   71  which php
+   72  echo 'export PATH="$HOME/.config/composer/vendor/bin:$PATH"' >> ~/.bashrc
+   73  echo 'export PATH="/usr/bin/php:$PATH"' >> ~/.bashrc
+   74  source ~/.bashrc
+   75  composer global require laravel/installer
+   76  php -m
+   77  sudo apt -y install nodejs
+   78  sudo apt -y install npm
+   79  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+   80  echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc
+   81  echo '#This loads nvm' >> ~/.bashrc
+   82  echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc
+   83  echo '#This loads nvm bash_completion' >> ~/.bashrc
+   84  echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc
+   85  source ~/.bashrc
+   86  nvm --version
+   87  nvm install v12.22.1
+   88  sudo apt -y install git
+   89  sudo apt update
+   90  sudo apt -y upgrade
+   91  composer create-project --prefer-dist laravel/laravel api-project
+   92  cd api-project
+   93  ls
+   94  echo "# my laravel, api-project" >> README.md
+   95  git init
+   96  git add README.md
+   97  git commit -m "first commit"
+   98  git config --global user.email "chenjuichi@gmail.com"
+   99  git config --global user.name "chenjuichi"
+  100  git commit -m "first commit"
+  101  git branch -M master
+  102  git remote add origin https://github.com/chenjuichi/api-project.git
+  103  git push -u origin master
+  104  sudo nano .gitignore
+  105  chmod -R 777 storage
+  106  chmod -R 777 bootstrap/cache
+  107  npm install
+  108  npm set audit false
+  109  mysql
+  110  mysql -u root -p
+  111  sudo nano /etc/mysql/my.cnf
+  112  sudo service mysql restart
+  
+  114  ls
+  115  php artisan make:migration CreateProjectsTable
+  116  php artisan make:migration create_users_projects_table
+  117  php artisan migrate
+  118  php artisan make:model Project
+  119  php artisan make:controller Api/ProjectController
+  120  php artisan make:migration create_students_table
+  121  php artisan make:migration create_students_projects_table
+  122  php artisan make:model Student
+  123  php artisan migrate
+  124  php artisan make:controller Api/StudentController
+  125  composer require laravel/sanctum
+  126  php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+  127  php artisan migrate
+  128  php artisan migrate:refresh
+
+  131  apachectl -v
+  132  history > history_for_api-project_2021-05-12.txt
