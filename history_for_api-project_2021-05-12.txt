@@ -110,7 +110,7 @@
   110  mysql -u root -p
   111  sudo nano /etc/mysql/my.cnf
   112  sudo service mysql restart
-  
+  113  LS
   114  ls
   115  php artisan make:migration CreateProjectsTable
   116  php artisan make:migration create_users_projects_table
@@ -126,6 +126,30 @@
   126  php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
   127  php artisan migrate
   128  php artisan migrate:refresh
-
+  129  php -S 139.162.97.192:8000 -t public/
+  130  php -S 139.162.97.192:8000 -t public/
   131  apachectl -v
   132  history > history_for_api-project_2021-05-12.txt
+  133  composer require laravel/jetstream
+  134  php artisan jetstream:install inertia
+  135  npm install
+  136  npm run dev
+  137  php artisan migrate
+  138  php artisan vendor:publish --tag=jetstream-views
+  139  php artisan serve
+  140  history
+  141  history 140 -d
+  142  history -d 140
+  143  history
+  144  php make:model ChatRoom -m
+  145  php artisan make:model ChatRoom -m
+  146  php artisan make:model ChatMessage -m
+  147  php artisan migrate
+  148  top
+  149  kill -9 pid
+  150  ps -aux | less
+  151  git status
+  152  git add -A
+  153  git commit -m "first commit"
+  154  git push -u origin master
+  155  history > history_for_api-project_2021-05-12.txt
